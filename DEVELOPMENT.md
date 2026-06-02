@@ -62,12 +62,30 @@ For the current fork-based collaboration model, also refer to:
 
 - `docs/git-workflow.zh-CN.md`
 
+## Documentation Workflow
+
+For non-trivial work, do not rely on commit history alone.
+
+Before implementation:
+
+- create a design note in `docs/superpowers/specs/` when the work changes structure or behavior
+- create a plan in `docs/superpowers/plans/` when the work needs task breakdown and execution tracking
+
+After implementation:
+
+- update `docs/project-status.zh-CN.md` if the project phase, current focus, or known risks changed
+- update `docs/changelog.zh-CN.md` for meaningful project milestones
+- archive formal audit results under `docs/audits/`
+
+Use `docs/README.zh-CN.md` as the public index for these documents.
+
 ## Minimum Checks Before Commit
 
 - The game still launches locally.
 - The modified flow works at least once end to end.
 - No local-only files or logs were staged.
 - Docs were updated if behavior, commands, or structure changed.
+- Status / plan / audit docs were updated when the change was substantial.
 
 ## File Organization Rules
 

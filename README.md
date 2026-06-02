@@ -93,6 +93,9 @@ If a workflow note or project-specific skill is useful for local development, st
 
 - [DEVELOPMENT.md](DEVELOPMENT.md)
 - [CONTRIBUTING.md](CONTRIBUTING.md)
+- [docs/README.zh-CN.md](docs/README.zh-CN.md)
+- [docs/project-status.zh-CN.md](docs/project-status.zh-CN.md)
+- [docs/changelog.zh-CN.md](docs/changelog.zh-CN.md)
 - [docs/release-checklist.md](docs/release-checklist.md)
 - [docs/git-workflow.zh-CN.md](docs/git-workflow.zh-CN.md)
 
@@ -100,3 +103,4 @@ If a workflow note or project-specific skill is useful for local development, st
 
 - `README_APK.md` remains as legacy packaging notes from the earlier project state.
 - This repository should always be usable without any private local-only files.
+- For current project state, planning, and audit records, start from `docs/README.zh-CN.md`.

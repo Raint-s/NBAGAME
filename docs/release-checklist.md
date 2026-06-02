@@ -43,4 +43,5 @@ Use this checklist before any public release, preview build, or store submission
 - [ ] diff was reviewed one more time before push
 - [ ] commit messages are understandable
 - [ ] docs changed with the implementation where needed
+- [ ] project status and changelog reflect the current release state
 - [ ] release artifacts come from the intended branch
