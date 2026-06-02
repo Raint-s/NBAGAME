@@ -58,6 +58,10 @@ Project-specific `skills.md` files are allowed for local use, but they must live
 6. Confirm no private files are included.
 7. Commit with a clear message.
 
+For the current fork-based collaboration model, also refer to:
+
+- `docs/git-workflow.zh-CN.md`
+
 ## Minimum Checks Before Commit
 
 - The game still launches locally.

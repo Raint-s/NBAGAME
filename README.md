@@ -94,6 +94,7 @@ If a workflow note or project-specific skill is useful for local development, st
 - [DEVELOPMENT.md](DEVELOPMENT.md)
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 - [docs/release-checklist.md](docs/release-checklist.md)
+- [docs/git-workflow.zh-CN.md](docs/git-workflow.zh-CN.md)
 
 ## Notes
 
