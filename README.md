@@ -58,6 +58,8 @@ npm run build:apk
 |-- CONTRIBUTING.md
 |-- DEVELOPMENT.md
 |-- README.md
+|-- assets/
+|   `-- icons/
 |-- docs/
 |   |-- release-checklist.md
 |   `-- superpowers/specs/
@@ -98,9 +100,10 @@ If a workflow note or project-specific skill is useful for local development, st
 - [docs/changelog.zh-CN.md](docs/changelog.zh-CN.md)
 - [docs/release-checklist.md](docs/release-checklist.md)
 - [docs/git-workflow.zh-CN.md](docs/git-workflow.zh-CN.md)
+- [docs/platforms/android-packaging.zh-CN.md](docs/platforms/android-packaging.zh-CN.md)
 
 ## Notes
 
-- `README_APK.md` remains as legacy packaging notes from the earlier project state.
+- Android packaging notes now live at `docs/platforms/android-packaging.zh-CN.md`.
 - This repository should always be usable without any private local-only files.
 - For current project state, planning, and audit records, start from `docs/README.zh-CN.md`.

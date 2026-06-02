@@ -9,8 +9,9 @@
 当前更准确的状态是：
 
 - 已完成：仓库卫生、公开/私有边界、基础协作文档、fork Git 流程
-- 刚补齐：状态文档、变更记录、审计归档、计划文档机制
-- 尚未完成：目录结构第二阶段整理、核心代码风险修复、发布级功能收口
+- 已补齐：状态文档、变更记录、审计归档、计划文档机制
+- 已完成：目录结构第二阶段轻整理
+- 尚未完成：核心代码风险修复、发布级功能收口
 
 ## 当前阶段划分
 
@@ -42,7 +43,7 @@
 
 ### Phase 2：目录结构轻整理
 
-状态：已规划，未实施
+状态：已完成
 
 目标：
 
@@ -53,6 +54,13 @@
 当前计划：
 
 - [superpowers/plans/2026-06-02-directory-structure-light-reorg-plan.md](superpowers/plans/2026-06-02-directory-structure-light-reorg-plan.md)
+
+已完成内容：
+
+- 图标资源迁移到 `assets/icons/`
+- Android 打包说明迁移到 `docs/platforms/android-packaging.zh-CN.md`
+- HTML、manifest、service worker、复制脚本已同步更新新路径
+- 根目录移除一批可归位的资源与历史文档
 
 ### Phase 3：代码与发布风险修复
 
@@ -67,12 +75,13 @@
 
 ## 当前仓库结构判断
 
-当前结构是“第一阶段已整理，但不是最终形态”。
+当前结构是“核心入口保持稳定，资源与文档已经完成第二阶段轻整理”。
 
 已整理：
 
 - `docs/`：公开文档
 - `scripts/`：辅助脚本
+- `assets/icons/`：公开图标资源
 
 暂时保留在根目录且仍然合理的文件：
 
@@ -80,7 +89,6 @@
 - `game.js`
 - `sw.js`
 - `manifest.webmanifest`
-- `icon-*`
 - `package.json`
 - `capacitor.config.json`
 
@@ -113,9 +121,9 @@
 
 按优先级建议：
 
-1. 按计划实施目录结构轻整理
-2. 再修第一批高风险代码问题
-3. 完成后更新本状态文档和 changelog
+1. 进入第一批高风险代码问题修复
+2. 完成后新增下一轮审计记录
+3. 持续维护本状态文档和 changelog
 
 ## 更新规则
 

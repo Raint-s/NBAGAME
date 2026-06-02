@@ -13,7 +13,7 @@
 - `sw.js`
 - `manifest.webmanifest`
 - `capacitor.config.json`
-- `README_APK.md`
+- `docs/platforms/android-packaging.zh-CN.md`（原 `README_APK.md`）
 
 ## 审计结论
 

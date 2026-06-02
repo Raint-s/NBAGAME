@@ -135,13 +135,13 @@
 
 ## 任务拆分
 
-1. [ ] 确定 Phase 2 实施边界：哪些文件不动，哪些文件可迁移
-2. [ ] 新建 `assets/icons/` 并迁移图标文件
-3. [ ] 更新 HTML、manifest、service worker、复制脚本中的图标路径
-4. [ ] 迁移 `README_APK.md` 到 `docs/` 体系内
-5. [ ] 更新 `README.md`、文档索引、项目状态文档中的相关路径说明
-6. [ ] 运行 `npm run www` 进行结构变更后的验证
-7. [ ] 更新 `docs/project-status.zh-CN.md` 与 `docs/changelog.zh-CN.md`
+1. [x] 确定 Phase 2 实施边界：哪些文件不动，哪些文件可迁移
+2. [x] 新建 `assets/icons/` 并迁移图标文件
+3. [x] 更新 HTML、manifest、service worker、复制脚本中的图标路径
+4. [x] 迁移 `README_APK.md` 到 `docs/` 体系内
+5. [x] 更新 `README.md`、文档索引、项目状态文档中的相关路径说明
+6. [x] 运行 `npm run www` 进行结构变更后的验证
+7. [x] 更新 `docs/project-status.zh-CN.md` 与 `docs/changelog.zh-CN.md`
 
 ## 完成标准
 
@@ -160,4 +160,4 @@
 
 ## 状态
 
-已规划，待实施。
+已完成。

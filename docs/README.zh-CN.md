@@ -24,6 +24,10 @@
   - 用途：发布前核对仓库卫生、运行状态、资源和打包流程
   - 何时更新：发布流程变化、检查项发现缺口时
 
+- [platforms/android-packaging.zh-CN.md](platforms/android-packaging.zh-CN.md)
+  - 用途：记录 Android / Capacitor 打包相关说明
+  - 何时更新：打包流程、平台要求或发布方式变化时
+
 ### 3. 审计记录
 
 - [audits/2026-06-02-initial-code-audit.zh-CN.md](audits/2026-06-02-initial-code-audit.zh-CN.md)

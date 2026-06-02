@@ -9,10 +9,10 @@ const ASSETS = [
   'index.html',
   'game.js',
   'sw.js',
-  'icon.svg',
-  'icon-192.png',
-  'icon-512.png',
-  'icon-1024.png',
+  'assets/icons/icon.svg',
+  'assets/icons/icon-192.png',
+  'assets/icons/icon-512.png',
+  'assets/icons/icon-1024.png',
   'manifest.webmanifest'
 ];
 
@@ -26,6 +26,7 @@ for (const file of ASSETS) {
     console.warn(`skip (not found): ${file}`);
     continue;
   }
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.copyFileSync(src, dest);
   count += 1;
   console.log(`copied: ${file}`);
