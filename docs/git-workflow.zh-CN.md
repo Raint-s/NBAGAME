@@ -164,63 +164,123 @@ git push -u origin feat/your-feature-name
 
 如果未来要正式上线、外部协作也增加，建议尽量收敛到这种方式。
 
-## 六、Pull Request 具体怎么提
+## 六、Pull Request 具体流程
 
-如果你们后续以朋友的仓库作为“主仓库”，那么推荐默认流程就是：
+如果朋友的仓库被当作“主仓库”，那么推荐默认流程就是：
 
 1. 你在本地开分支开发
-2. 推到你自己的 `origin` 分支
-3. 从你的 fork 向朋友的 `upstream` 发 PR
+2. 推到你自己的 `origin`
+3. 从你的 fork 向朋友的 `upstream` 发 Pull Request
 4. 朋友审核并合并
 
-### 网页方式（当前最稳）
+### 当前这一次怎么做
 
-当前这台机器如果没有安装并登录 GitHub CLI，那么最稳的方式是 GitHub 网页提 PR。
+因为当前仓库已经在你的 `main` 上积累了一批“仓库治理 + 文档体系 + 结构整理”改动，所以这一次可以作为一次汇总 PR：
 
-示例流程：
+- head repository: `Raint-s/NBAGAME`
+- head branch: `main`
+- base repository: `Jiaoni7/NBAGAME`
+- base branch: `main`
+
+这适合作为“把你 fork 中当前整理成果同步回朋友主仓库”的首个 PR。
+
+但从这次之后，建议尽量不要长期继续用 `main` 直接发 PR，而是改成分支 PR。
+
+### 后续日常推荐流程
 
 ```bash
+git switch main
+git pull --ff-only origin main
 git switch -c feat/your-feature-name
+```
+
+改完后：
+
+```bash
 git add <files>
 git commit -m "feat: describe the change"
 git push -u origin feat/your-feature-name
 ```
 
-然后在 GitHub 上：
+然后从：
 
-1. 打开你的 fork：`Raint-s/NBAGAME`
-2. GitHub 通常会提示 `Compare & pull request`
-3. 选择：
+- `Raint-s:feat/your-feature-name`
+
+向：
+
+- `Jiaoni7:main`
+
+发 Pull Request。
+
+### 网页方式
+
+如果不走命令行，网页方式始终可用。
+
+流程：
+
+1. 推送分支到 `origin`
+2. 打开你的 fork：`Raint-s/NBAGAME`
+3. 点击 `Compare & pull request`
+4. 选择：
    - base repository: `Jiaoni7/NBAGAME`
    - base branch: `main`
    - head repository: `Raint-s/NBAGAME`
-   - compare branch: `feat/your-feature-name`
-4. 填写标题和说明
-5. 创建 PR
+   - compare branch: 你的分支
+5. 填写标题和说明
+6. 创建 PR
 
-### 命令行方式（未来可选）
+### GitHub CLI 方式
 
-如果以后本机安装了 `gh`，并完成 GitHub 登录，那么可以本地直接创建 PR。
+当前本机已安装 `gh`，但在使用前需要先登录：
 
-示例命令：
+```bash
+gh auth login
+```
+
+登录后可以直接在本地创建 PR。
+
+示例：
 
 ```bash
 gh pr create --repo Jiaoni7/NBAGAME --base main --head Raint-s:feat/your-feature-name
 ```
 
-注意：
+如果是这一次的汇总 PR，则可以用：
 
-- `gh` 当前不属于本仓库的前置依赖
-- 如果机器没有安装 `gh`，或者没有完成认证，就不能直接在本地创建 PR
-- 在这种情况下，继续使用 GitHub 网页即可
+```bash
+gh pr create --repo Jiaoni7/NBAGAME --base main --head Raint-s:main
+```
 
-### 建议
+### 建议的 PR 标题风格
+
+- `chore: sync repository hygiene baseline`
+- `docs: add project documentation workflow`
+- `refactor: complete Phase 2 light structure reorg`
+- `feat: ...`
+- `fix: ...`
+
+### 建议的 PR 说明最小结构
+
+```text
+## Summary
+- change 1
+- change 2
+
+## Verification
+- local run checked
+- npm run www checked
+
+## Notes
+- any caveats or follow-up items
+```
+
+### 你们当前最适合的策略
 
 对你们现在这种“你主开发、朋友偏产品”的模式，我建议：
 
-- 日常开发和自测：在你的 `origin` 分支上完成
+- 日常开发和自测：在你的 `origin` 分支完成
 - 准备让朋友审核或并入主仓库时：通过 PR 进入 `upstream`
-- 不要频繁直接往 `upstream/main` 推代码，除非以后仓库权限和流程已经明确收敛
+- 不要频繁直接往 `upstream/main` 推代码
 
 ## 七、提交前固定检查
 
